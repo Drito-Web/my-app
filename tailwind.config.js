@@ -1,11 +1,15 @@
 module.exports = {
   content: [
-    './src/**/*.{html,js}'
+    "./src/**/*.{html,js,jsx,ts,tsx}",
   ],
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        'custom':'960px',
+      }
+    },
   },
   variants: {
     extend: {},

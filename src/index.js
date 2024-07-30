@@ -1,7 +1,7 @@
 const baseUrl = "https://platzi-avo.vercel.app";
 
 const appNode = document.querySelector("#app")
-appNode.className = '';
+appNode.className = 'mx-auto max-w-3xl bg-white p-4';
 
 
 appNode.addEventListener('click', (event) => {
