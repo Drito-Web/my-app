@@ -27,8 +27,8 @@ const formatPrice = (price) => {
 // Json -> Data -> Renderizar la info browser
 
 window
-  .fetch(`${baseUrl}/api/avo`)            //procesar la respuesta y convertirla en json
-  .then((respuesta) => respuesta.json())  //Json => data ->conbertir en info browser
+  .fetch(`${baseUrl}/api/avo`)//procesar la respuesta y convertirla en json
+  .then((respuesta) => respuesta.json())//Json => data ->conbertir en info browser
   .then((respuestajson) => {
     const todosLosItems = [];
     respuestajson.data.forEach((item) => {
