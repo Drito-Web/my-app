@@ -1,9 +1,11 @@
-// const baseUrl = "https://platzi-avo.vercel.app";
+const baseUrl = "https://platzi-avo.vercel.app";
 
-// const appNode = document.querySelector("#app")
+const appNode = document.querySelector("#app")
+appNode.className = '';
+
+
 appNode.addEventListener('click', (event) => {
-  if (event.target.nodeName === "H2") {
-
+  if (event.target.nodeName === 'H2') {
     window.alert(`click en un: ${event.target.nodeName}`)
   }
 
@@ -11,7 +13,6 @@ appNode.addEventListener('click', (event) => {
 
 // intl -> formato a fechas, monedas
 const formatPrice = (price) => {
-
   const newPrice = new window.Intl.NumberFormat('en-EN', {
     style: 'currency',
     currency: 'USD',
@@ -26,16 +27,16 @@ const formatPrice = (price) => {
 // Json -> Data -> Renderizar la info browser
 
 window
-  .fetch(`${baseUrl}/api/avo`)//procesar la respuesta y convertirla en json
+  .fetch(`${baseUrl}/api/avo`) //procesar la respuesta y convertirla en json
 
-  .then((respuesta) => respuesta.json())//Json => data ->conbertir en info browser
+  .then((respuesta) => respuesta.json()) //Json => data ->conbertir en info browser
 
   .then((respuestajson) => {
     const todosLosItems = [];
     respuestajson.data.forEach((item) => {
 
       const container = document.createElement('div')
-      const image = document.createElement('img')  //create image
+      const image = document.createElement('img')
       const title = document.createElement('h2')
       const price = document.createElement('span')
       const priceAndTitle = document.createElement('div')
@@ -72,7 +73,6 @@ window
     });
 
     appNode.append(...todosLosItems);
-    // appNode.className = 'grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center'
 
   })
 
