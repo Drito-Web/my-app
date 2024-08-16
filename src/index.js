@@ -1,7 +1,7 @@
 const baseUrl = "https://platzi-avo.vercel.app";
 
 const appNode = document.querySelector("#app")
-appNode.className = 'mx-auto max-w-3xl bg-white p-4';
+appNode.classList = 'mx-auto max-w-3xl bg-white p-4';
 
 
 appNode.addEventListener('click', (event) => {
@@ -41,27 +41,27 @@ window
       const card = document.createElement('div')
 
       image.src = `${baseUrl}${item.image}`
-      image.className = 'h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6'
+      image.classList= 'h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6'
 
       // Crear título
-      title.className = 'text-lg'
+      title.classList = 'text-lg'
       title.textContent = item.name
       // title.style.fontSize = '2rem'
       // title.style = 'font-size:5rem'
 
       // create price
-      price.className = 'text-grey-600'
+      price.classList = 'text-grey-600'
       price.textContent = formatPrice(item.price)
       // price.style.backgroundColor = 'red'
       // price.style = 'background-color:blue'
 
       // Creamos un contenedor el título y el precio
-      priceAndTitle.className = 'text-center md:text-left'
+      priceAndTitle.classList = 'text-center md:text-left'
       priceAndTitle.appendChild(title)
       priceAndTitle.appendChild(price)
 
       // Metemos todo dentro de una tarjeta contenedora
-      card.className = 'md:flex flex-row bg-white rounded-lg p-6 hover:bg-gray-300'
+      card.classList= 'md:flex flex-row bg-white rounded-lg p-6 hover:bg-gray-300'
       card.append(image, priceAndTitle)
 
       container.appendChild(card)
