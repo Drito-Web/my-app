@@ -46,14 +46,12 @@ window
       // Crear título
       title.classList = 'text-lg'
       title.textContent = item.name
-      // title.style.fontSize = '2rem'
-      // title.style = 'font-size:5rem'
+     
 
       // create price
       price.classList = 'text-grey-600'
       price.textContent = formatPrice(item.price)
-      // price.style.backgroundColor = 'red'
-      // price.style = 'background-color:blue'
+     
 
       // Creamos un contenedor el título y el precio
       priceAndTitle.classList = 'text-center md:text-left'
